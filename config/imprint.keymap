@@ -40,14 +40,14 @@
 
         Keyboard_Control_Layer {
             bindings = <
-&trans       &rgb_ug RGB_COLOR_HSB(0,90,27)  &rgb_ug RGB_COLOR_HSB(28,97,39)  &rgb_ug RGB_COLOR_HSB(53,76,57)  &rgb_ug RGB_COLOR_HSB(100,74,22)  &rgb_ug RGB_COLOR_HSB(201,75,47)            &rgb_ug RGB_COLOR_HSB(234,73,27)  &rgb_ug RGB_COLOR_HSB(274,91,31)  &rgb_ug RGB_COLOR_HSB(317,85,49)  &trans           &trans           &trans
-&bt BT_CLR   &bt BT_SEL 0                    &bt BT_SEL 1                     &bt BT_SEL 2                     &bt BT_SEL 3                      &bt BT_SEL 4                                &trans                            &rgb_ug RGB_TOG                   &rgb_ug RGB_EFF                   &trans           &trans           &trans
-&sys_reset   &trans                          &trans                           &trans                           &trans                            &trans                                      &rgb_ug RGB_TOG                   &rgb_ug RGB_HUI                   &rgb_ug RGB_SAI                   &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &sys_reset
-&bootloader  &trans                          &trans                           &trans                           &trans                            &trans                                      &trans                            &rgb_ug RGB_HUD                   &rgb_ug RGB_SAD                   &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &bootloader
-&to 4        &trans                          &trans                           &trans                           &trans                            &trans                                      &trans                            &trans                            &trans                            &trans           &trans           &to 4
-&to 4        &trans                          &trans                           &trans                           &trans                                                                                                          &trans                            &trans                            &trans           &trans           &to 4
-                                                                                                               &trans                            &trans                            &trans    &trans                            &trans                            &trans
-                                                                                                               &trans                            &trans                            &trans    &trans                            &trans                            &trans
+&trans      &rgb_ug RGB_COLOR_HSB(0,90,27)  &rgb_ug RGB_COLOR_HSB(28,97,39)  &rgb_ug RGB_COLOR_HSB(53,76,57)  &rgb_ug RGB_COLOR_HSB(100,74,22)  &rgb_ug RGB_COLOR_HSB(201,75,47)            &rgb_ug RGB_COLOR_HSB(234,73,27)  &rgb_ug RGB_COLOR_HSB(274,91,31)  &rgb_ug RGB_COLOR_HSB(317,85,49)  &trans           &trans           &trans
+&bt BT_CLR  &bt BT_SEL 0                    &bt BT_SEL 1                     &bt BT_SEL 2                     &bt BT_SEL 3                      &bt BT_SEL 4                                &trans                            &rgb_ug RGB_TOG                   &rgb_ug RGB_EFF                   &trans           &trans           &trans
+&trans      &trans                          &trans                           &trans                           &trans                            &trans                                      &rgb_ug RGB_TOG                   &rgb_ug RGB_HUI                   &rgb_ug RGB_SAI                   &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &trans
+&trans      &trans                          &trans                           &trans                           &trans                            &trans                                      &trans                            &rgb_ug RGB_HUD                   &rgb_ug RGB_SAD                   &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &trans
+&trans      &trans                          &trans                           &trans                           &trans                            &trans                                      &trans                            &trans                            &trans                            &trans           &trans           &tog 0
+&trans      &trans                          &trans                           &trans                           &trans                                                                                                          &trans                            &trans                            &trans           &trans           &trans
+                                                                                                              &trans                            &trans                            &trans    &trans                            &trans                            &trans
+                                                                                                              &trans                            &trans                            &trans    &trans                            &trans                            &trans
             >;
         };
 
@@ -89,10 +89,10 @@
 
 &trackball_central_listener {
     input-processors =
-        // multiply sensitivity by 1, divide by 15 (make it slower for scrolling),,,,,
+        // multiply sensitivity by 1, divide by 15 (make it slower for scrolling),,,,,,
         <&zip_xy_scaler 1 30>,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,
+        // make this trackball output scrolling events by default instead of cursor movement,,,,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
 };
