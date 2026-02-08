@@ -13,14 +13,14 @@
 
         default_layer {
             bindings = <
-&kp ESC    &kp F1            &kp F2    &kp F3    &kp F4           &kp F5                     &kp F6     &kp F7         &kp F8     &kp F9    &kp F10          &kp F11
-&kp GRAVE  &kp N1            &kp N2    &kp N3    &kp N4           &kp N5                     &kp N6     &kp N7         &kp N8     &kp N9    &kp N0           &kp MINUS
-&kp TAB    &kp Q             &kp W     &kp E     &kp R            &kp T                      &kp Y      &kp U          &kp I      &kp O     &kp P            &kp BSLH
-&kp CAPS   &kp A             &kp S     &kp D     &kp F            &kp G                      &kp H      &kp J          &kp K      &kp L     &kp SEMI         &kp SQT
-&kp LSHFT  &kp Z             &kp X     &kp C     &kp V            &kp B                      &kp N      &kp M          &kp COMMA  &kp DOT   &kp FSLH         &tog 2
-&kp ESC    &kp LEFT_CONTROL  &kp LGUI  &kp LALT  &rgb_ug RGB_TOG                                        &kp C_SLEEP    &kp LBKT   &kp RBKT  &kp PRINTSCREEN  &kp DELETE
-                                                 &kp HOME         &kp END       &mkp LCLK    &mkp RCLK  &kp BACKSPACE  &kp SPACE
-                                                 &kp LEFT         &kp UP_ARROW  &kp EQUAL    &kp ENTER  &kp DOWN       &kp RIGHT
+&kp ESC    &kp F1            &kp F2    &kp F3    &kp F4           &kp F5                     &kp F6     &kp F7             &kp F8     &kp F9    &kp F10          &kp F11
+&kp GRAVE  &kp N1            &kp N2    &kp N3    &kp N4           &kp N5                     &kp N6     &kp N7             &kp N8     &kp N9    &kp N0           &kp MINUS
+&kp TAB    &kp Q             &kp W     &kp E     &kp R            &kp T                      &kp Y      &kp U              &kp I      &kp O     &kp P            &kp BSLH
+&kp CAPS   &kp A             &kp S     &kp D     &kp F            &kp G                      &kp H      &kp J              &kp K      &kp L     &kp SEMI         &kp SQT
+&kp LSHFT  &kp Z             &kp X     &kp C     &kp V            &kp B                      &kp N      &kp M              &kp COMMA  &kp DOT   &kp FSLH         &tog 2
+&kp ESC    &kp LEFT_CONTROL  &kp LGUI  &kp LALT  &rgb_ug RGB_TOG                                        &kp K_SCREENSAVER  &kp LBKT   &kp RBKT  &kp PRINTSCREEN  &kp DELETE
+                                                 &kp HOME         &kp END       &mkp LCLK    &mkp RCLK  &kp BACKSPACE      &kp SPACE
+                                                 &kp LEFT         &kp UP_ARROW  &kp EQUAL    &kp ENTER  &kp DOWN           &kp RIGHT
             >;
         };
 
@@ -88,10 +88,10 @@
 
 &trackball_central_listener {
     input-processors =
-        // multiply sensitivity by 1, divide by 15 (make it slower for scrolling),,,,,,,,,,,
+        // multiply sensitivity by 1, divide by 15 (make it slower for scrolling),,,,,,,,,,,,
         <&zip_xy_scaler 1 30>,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,
+        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
 };
